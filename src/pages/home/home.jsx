@@ -1,13 +1,19 @@
 import React from 'react';
-import './home.css';
 import NavBar from '../../components/nav/nav';
+import styled from 'styled-components';
+import down_chevron from '../../assets/chevron-down.png';
+
+const Hero = styled.header``;
+
+const HeroText = styled.div``;
+
+const HeroButton = styled.button``;
 
 const Home = () => {
   return (
-    <div>
+    <body>
       <NavBar />
-      <h1>Home</h1>
-    </div>
+    </body>
   );
 };
 
