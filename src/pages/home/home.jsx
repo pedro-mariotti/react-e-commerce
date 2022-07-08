@@ -6,7 +6,7 @@ import compras from '../../assets/compras.svg';
 
 const Hero = styled.header``;
 
-const Home = () => {
+export default function Home() {
   return (
     <Hero>
       <NavBar />
@@ -26,6 +26,4 @@ const Home = () => {
       </Hero> */}
     </Hero>
   );
-};
-
-export default Home;
+}

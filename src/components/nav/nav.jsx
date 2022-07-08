@@ -3,7 +3,8 @@ import logo from '../../assets/lojinha-logo.svg';
 import searchIcon from '../../assets/search-icon.png';
 import styled from 'styled-components';
 import { dark, darkGreen, gray } from '../../utils/colors';
-import { tablet, mobile } from '../../utils/constants';
+import { mobile } from '../../utils/constants';
+import MobileMenu from './mobileMenu/mobileMenu';
 
 const Nav = styled.nav`
   display: grid;
@@ -13,8 +14,12 @@ const Nav = styled.nav`
   a {
     color: ${dark};
   }
+  a:hover {
+    font-weight: 700;
+  }
   .searchDiv {
     position: relative;
+
     width: 80%;
   }
   .searchInput {
@@ -23,6 +28,7 @@ const Nav = styled.nav`
     width: 100%;
     padding: 8px 12px;
     color: ${gray};
+    z-index: 0;
   }
   .searchInput:focus {
     outline: none;
@@ -37,19 +43,10 @@ const Nav = styled.nav`
   }
   .navOptionDiv {
     display: flex;
-    button {
-      font-weight: 500;
-      color: white;
-      background: ${darkGreen};
-      padding: 10px 30px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
     justify-content: space-between;
     align-items: center;
   }
-  @media (max-width: ${tablet}) {
+  @media (max-width: ${mobile}) {
     grid-template-columns: 1fr 1fr;
     padding: 10px 30px;
     .searchDiv {
@@ -57,28 +54,34 @@ const Nav = styled.nav`
       grid-row: 2;
       width: 100%;
       display: flex;
+      padding-top: 16px;
       justify-content: center;
       align-items: center;
     }
     .searchButton {
       right: 5px;
+      top: 25px;
     }
     .navOptionDiv {
       display: none;
     }
   }
 `;
-
-const BurgerMenu = styled.div`
-  display: none;
-  @media (max-width: ${tablet}) {
-    display: block;
-  }
+export const CartButton = styled.button`
+  font-weight: 500;
+  color: white;
+  background: ${darkGreen};
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 `;
-const NavBar = () => {
+
+export default function NavBar() {
   return (
     <Nav>
       <img src={logo} alt="Logo" />
+      <MobileMenu />
       <div className="searchDiv">
         <input
           className="searchInput"
@@ -99,10 +102,8 @@ const NavBar = () => {
         <a href="" className="navOption">
           Anunciar
         </a>
-        <button>Carrinho</button>
+        <CartButton>Carrinho</CartButton>
       </div>
     </Nav>
   );
-};
-
-export default NavBar;
+}
