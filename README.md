@@ -2,7 +2,7 @@
 
 ## Descrição
 
-    Parabéns por chegarem ao estágio final do núcleo e do pluginfo! Aqui a nossa jornada chega ao fim e estamos todos muito gratos por termos vocês conosco. Essa atividade consiste no desenvolvimento de uma simulação de loja virtual. Vocês trabalharam em grupos de 3 devs, 2 para o front-end e 1 para o back end, além de contarem com a ajuda de um revisor para cada grupo. As tecnologias utilizadas devem ser * :
+Parabéns por chegarem ao estágio final do núcleo e do pluginfo! Aqui a nossa jornada chega ao fim e estamos todos muito gratos por termos vocês conosco. Essa atividade consiste no desenvolvimento de uma simulação de loja virtual. Vocês trabalharam em grupos de 3 devs, 2 para o front-end e 1 para o back end, além de contarem com a ajuda de um revisor para cada grupo. As tecnologias utilizadas devem ser \* :
 
 \*Vocês tem liberdade para usar quaisquer libs js a sua escolha
 
